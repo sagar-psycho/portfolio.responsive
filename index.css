@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f4f4f4;
+}
+.cont{
+    padding: 15px;
+    background-color: rgb(7, 10, 42);
+    color: white;
+    animation: slideIn 1s forwards;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100px) translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+
+}
+
+.one{
+    display: flex;
+    gap: 10vh;
+}
+
+@media (max-width: 769px){
+    .one{
+        display: block;
+    }
+    .imag img{
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
+.imag img{
+    height: 500px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+.imag p{
+    text-align: center;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: colorchange 2s infinite;
+}
+@keyframes colorchange{
+    0%{
+        color: red;
+        text-decoration: underline;
+    }
+    10%{
+        color: rgb(0, 255, 89);
+    }
+    20%{
+        color: rgb(0, 225, 241);
+    }
+    30%{
+        color: rgb(249, 0, 249);
+    }
+    40%{
+        color: rgba(145, 43, 43, 0.462);
+    }
+    50%{
+        color: peru;
+        text-decoration: underline;
+    }
+    60%{
+        color: purple;
+    }
+    70%{
+        color: yellow;
+    }
+    80%{
+        color: yellowgreen;
+    }
+    90%{
+        color: orange;
+    }
+    100%{
+        color: green;
+        text-decoration: underline;
+    }
+}
+.social-media{
+    font-size: 2rem;
+    transition: .5s ease;
+}
+
+.social-media a {
+    margin: 2.5rem .75rem 3rem;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.about img{
+    height: 500px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.about{
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+}
+.matter{
+    padding-top: 50%;
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.matter h1{
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 60px;
+}
+.styling-card{
+    padding: 20px;
+    background-color: #a0d2eb;
+}
+@media (max-width: 769px){
+    .about{
+        display: block;
+    }
+    .about img{
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .matter h1{
+        padding-top: 10px;
+    }
+    .styling-card{
+        padding: 20px;
+    }
+}
+.portfolio-container, .projects2{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+@media (max-width: 769px){
+    .portfolio-container{
+        display: block;
+    }
+    .carding{
+        margin-bottom: 10px;
+    }
+}
+
+#certification-style{
+    display: flex;
+    padding: 10px;
+}
+
+.skills{
+    padding: 20px;
+    background-color: #e8f9fd;
+}
+.skills-process{
+    width: 90%;
+    margin-bottom: 10px;
+}
