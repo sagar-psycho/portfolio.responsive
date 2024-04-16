@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks for contacting me</title>
+    <link rel="icon" href="Sagar_photo.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 36px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            animation: slideIn 1s ease-out;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @media(max-width: 769px){
+            body{
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Thanks for contacting me</h1>
+    <p>I will contact you back as soon as possible.</p>
+    <a href="index.html">Go&nbsp;back</a>
+</body>
+</html>
