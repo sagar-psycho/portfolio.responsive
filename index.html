@@ -247,6 +247,44 @@
                 <div class="progress-bar bg-info" style="width: 50%">Java</div>
             </div>
         </div>
+        <div id="cont">
+            <h1 style="text-align: center;">Contant <span style="color: blue;">Me</span> </h1>
+            <div class="form-container">
+                <form action="https://sheetdb.io/api/v1/s5wbzoc4spabv" method="POST" id="sheetdb">
+                    <div class="input-row">
+                        <label>Name <em style="color: rgb(255, 0, 0);">*</em></label>
+                        <input type="text" placeholder="Name" name="data[Name]" required id="userName">
+                    </div>
+                    <div class="input-row">
+                        <label>Number <em style="color: rgb(255, 0, 0);">*</em></label>
+                        <input type="number" placeholder="Number" name="data[Number]" required id="userEmail">
+                    </div>
+                    <div class="input-row">
+                        <label>Email <em style="color: rgb(255, 0, 0);">*</em></label>
+                        <input  placeholder="Email Address" type="text" name="data[Email]" required id="userPhone">
+                    </div>
+                    <div class="input-row">
+                        <label>Your Opinion<em style="color: rgb(255, 0, 0);">*</em></label>
+                        <input style="width: 210px; height: 90px; " placeholder="Be Free" type="text" name="data[Message]" required id="userPhone">
+                    </div>
+                    <div class="input-row">
+                        <button>Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 </body>
+<script>
+    var form=document.getElementById("sheetdb")
+form.addEventListener("submit", e=>{
+e.preventDefault();
+fetch(form.action,{
+    method:"POST",
+    body: new FormData(document.getElementById("sheetdb")),
+}).then((html) => {
+    window.open('thanks.html');
+});
+})
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
