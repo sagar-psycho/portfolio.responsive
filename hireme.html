@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hire me</title>
+<link rel="icon" href="k Sagar photo.jpg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    .contaner {
+        width: 50%;
+        margin: 40px auto;
+    }
+    @media (max-width: 769px) {
+        .contaner {
+        width: 90%;
+        margin: 40px auto;
+    }
+    }
+</style>
+</head>
+<body>
+    <div class="contaner">
+        <form action="#">
+            <p>Thanks recruiter for showing interest in my resume. </p>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" required placeholder="Name">
+            <label for="floatingInput">Name <em style="color: red;">*</em></label>
+        </div><br>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="floatingNumber" required placeholder="Number">
+            <label for="floatingNumber">Mobile Number <em style="color: red;">*</em></label>
+        </div><br>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingCompany" required placeholder="Company">
+            <label for="floatingCompany">Company Name <em style="color: red;">*</em></label>
+        </div><br>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingEmail" required placeholder="Email">
+            <label for="floatingEmail">Email <em style="color: red;">*</em></label>
+        </div>
+        <br><br>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">You are HIRING for <em style="color: red;">*</em></label>
+            <select class="form-select" id="inputGroupSelect01" onchange="updateText()">
+                <option selected>Choose...</option>
+                <option value="software">Software Developer</option>
+                <option value="frontend">Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+                <option value="fullStack">Full Stack Developer</option>
+                <option value="jrFullStack">Junior Full Stack Developer</option>
+            </select>
+        </div>
+        <p id="text"></p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <button type="submit" class="btn btn-success">Send</button>
+        </div>
+        </form>
+    </div>
+    <script>
+        const texts = {
+            software: "You are hiring me for a Software Developer",
+            frontend: "You are hiring me for a Frontend Developer",
+            backend: "You are hiring me for a Backend Developer",
+            fullStack: "You are hiring me for a Full Stack Developer",
+            jrFullStack: "You are hiring me for a Junior Full Stack Developer",
+        };
+
+        function updateText() {
+            const selectElement = document.getElementById("inputGroupSelect01");
+            const selectedValue = selectElement.value;
+            const textElement = document.getElementById("text");
+            textElement.textContent = texts[selectedValue] || "";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
