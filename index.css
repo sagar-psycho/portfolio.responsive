@@ -28,7 +28,9 @@ body{
     display: flex;
     gap: 10vh;
 }
-
+#hiremme{
+    display: none;
+}
 @media (max-width: 769px){
     .one{
         display: block;
@@ -37,6 +39,9 @@ body{
         display: block;
         margin: 0 auto;
         padding: 10px;
+    }
+    #hiremme{
+        display: inline;
     }
 }
 .imag img{
@@ -163,6 +168,7 @@ form{
 	outline: 0;
 	margin-bottom: 3px;
 	font-size: 18px;
+    width: 600px;
     margin-left: -2rem;
 	font-family: arial;
 }
@@ -318,4 +324,10 @@ form{
 .bx-link-external::before {
     content: '\f08e'; /* You can use FontAwesome or any other icon library */
     font-family: 'Boxicons';
+}
+#changingroles {
+    font-weight: bold;
+    border-right: 2px solid rgb(255, 255, 255);
+    white-space: nowrap;
+    overflow: hidden;
 }
