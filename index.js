@@ -86,3 +86,7 @@ fetch(form.action,{
 });
 })
 
+document.addEventListener("contextmenu", function(event){
+    alert("inspect is not allowed");
+    event.preventDefault();
+})
