@@ -113,72 +113,18 @@ body{
     }
 }
 #certi{
-    background-color: #0049B7; 
+    background-color: #0049B7;
     color: white;
 }
 .certihead{
-    text-align: center; 
+    text-align: center;
     text-decoration: underline;
 }
 #certification-style{
     display: flex;
     padding: 10px;
-
 }
 
-.skills{
-    padding: 20px;
-    background-color: #e8f9fd;
-}
-.skills-process{
-    width: 90%;
-    margin-bottom: 10px;
-}
-
-form{
-    margin-left: 30%;
-    margin-top: 3rem;
-}
-.form-container{
-	width: 100%;
-    display: flex;
-    background: #0d224a;
-    padding: 20px;
-    border-radius: 10px;
-    color: #fff;
-}
-.input-row{
-    margin-bottom: 10px;
-}
-.input-row label{
-	display: block;
-	margin-bottom: 3px;
-    margin-left: -2rem;
-}
-
-.input-row input{
-	padding: 10px;
-	border:0;
-	border-radius: 3px;
-	outline: 0;
-	margin-bottom: 3px;
-	font-size: 18px;
-    width: 600px;
-    margin-left: -2rem;
-	font-family: arial;
-}
-.input-row button {
-    width: 100px;
-    border: none;
-    height: 40px;
-    margin:0 auto;
-    display: block;
-    text-align: center;
-    background: #0688a5;
-    color: #ffffff;
-    border-radius: 10px;
-    cursor: pointer;
-}
 .text-cent{
     margin-top:  auto;
     justify-content: center;
@@ -187,7 +133,7 @@ form{
     font-family: "Teko", sans-serif;
 }
 
-#changingText, #changing, #edu, #pro , #cer ,#ski {
+#edu, #pro , #cer ,#ski {
     color: rgb(255, 255, 255);
     overflow: hidden;
     white-space: nowrap;
@@ -201,6 +147,9 @@ form{
     to {
         width: 100%;
     }
+}
+#skills{
+    background-color: lightblue;
 }
 .skills  {
     display: flex;
@@ -239,12 +188,6 @@ form{
 .bx-link-external::before {
     content: '\f08e'; /* You can use FontAwesome or any other icon library */
     font-family: 'Boxicons';
-}
-#changingroles {
-    font-weight: bold;
-    border-right: 2px solid rgb(255, 255, 255);
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .guarantee {
@@ -321,15 +264,61 @@ form{
     color: #ffb742;
 }
 
-/* Media query for mobile view */
 @media (max-width: 600px) {
     .guarantee {
         flex-wrap: wrap;
-        padding: 0 20px; /* Adjust padding for mobile view */
+        padding: 0 20px;
     }
 
     .guarantee .item {
         width: 100%;
-        margin-bottom: 20px; /* Add space between items */
+        margin-bottom: 20px;
+    }
+}
+
+
+#sliderValue {
+    display: flex;
+    color: #0077ee;
+    font-weight: 700;
+}
+
+
+.start {
+    opacity: 0;
+}
+
+.animation {
+    animation: fade .3s forwards;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.holder-animation {
+    animation: holder 4s;
+}
+
+@keyframes holder {
+    0% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
