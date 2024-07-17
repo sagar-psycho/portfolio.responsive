@@ -1,30 +1,61 @@
-const roles = ["Web Developer", "Web Designer", "Software Engineer", "FrontEnd Developer", "BackEnd Developer"];
-let currentRoleIndex = 0;
-const changingRolesElement = document.getElementById("changingroles");
-let currentText = "";
-let isDeleting = false;
-let charIndex = 0;
+var sliderCounter = 0;
+var sliderContent = [
+    "Web Developer",
+    "Web Designer",
+    "Software Developer",
+    "Web Development",
+    "FrontEnd Developer",
+    "BackEnd Developer"
+];
+var slider = document.querySelector("#slider");
+var sliderValue = document.querySelector("#sliderValue");
 
-function type() {
-    const currentRole = roles[currentRoleIndex];
-
-    if (isDeleting) {
-        currentText = currentRole.substring(0, charIndex--);
-    } else {
-        currentText = currentRole.substring(0, charIndex++);
+function slide() {
+    if (sliderCounter >= sliderContent.length) {
+        sliderCounter = 0;
     }
 
-    changingRolesElement.textContent = currentText;
+    sliderValue.innerHTML = "";
 
-    if (!isDeleting && charIndex === currentRole.length) {
-        setTimeout(() => isDeleting = true, 1000); // Pause at the end
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+    sliderValue.classList.remove("holder-animation");
+    void sliderValue.offsetWidth;
+    sliderValue.classList.add("holder-animation");
+
+    for (i = 0; i < sliderContent[sliderCounter].length; i++) {
+        let letterDiv = document.createElement("div");
+        letterDiv.innerHTML = sliderContent[sliderCounter][i];
+
+        if (letterDiv.innerHTML == " ") {
+            letterDiv.innerHTML = "&nbsp;";
+        }
+        letterDiv.classList.add("start");
+        letterDiv.classList.add("animation");
+        letterDiv.style.animationDelay = i / 10 + "s";
+        sliderValue.appendChild(letterDiv);
     }
 
-    const typingSpeed = isDeleting ? 100 : 200; // Adjust typing speed here
-    setTimeout(type, typingSpeed);
+    sliderCounter++;
 }
 
-type();
+slide();
+setInterval(slide, 2000);
+
+function incrementNumber(elementId, targetNumber) {
+    const displayElement = document.getElementById(elementId);
+    let currentNumber = 0;
+
+    function increment() {
+        displayElement.textContent = currentNumber;
+        if (currentNumber < targetNumber) {
+            currentNumber++;
+            setTimeout(increment, 500);
+        }
+    }
+
+    increment();
+}
+
+window.onload = function() {
+    incrementNumber('changingCloneProjects', 4);
+    incrementNumber('changingCreativeProjects', 5);
+};
