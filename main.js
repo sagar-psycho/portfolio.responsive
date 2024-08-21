@@ -57,5 +57,5 @@ function incrementNumber(elementId, targetNumber) {
 
 window.onload = function() {
     incrementNumber('changingCloneProjects', 4);
-    incrementNumber('changingCreativeProjects', 5);
+    incrementNumber('changingCreativeProjects', 9);
 };
